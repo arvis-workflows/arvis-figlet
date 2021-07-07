@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "creator": "importre",
+  "description": "arvis workflow to asciify plain text using figlet.js",
+  "name": "figlet",
+  "readme": "arvis workflow to asciify plain text using figlet.js\n\nSee https://github.com/jopemachine/arvis-figlet",
+  "version": "0.0.1",
+  "webAddress": "https://github.com/jopemachine/arvis-figlet",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "keyword",
+      "command": "figlet-all",
+      "title": "figlet-all",
+      "subtitle": "Show all fonts",
+      "argType": "no",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "open",
+          "target": "https://github.com/importre/alfred-figlet/blob/master/helloworld.md"
+        }
+      ]
+    },
+    {
+      "type": "scriptFilter",
+      "command": "figlet-font",
+      "title": "figlet-font",
+      "subtitle": "Search font that you want and select it!",
+      "scriptFilter": "node ./src/fonts.js \"{query}\"",
+      "runningSubtext": "Searching...",
+      "withspace": true,
+      "argType": "required",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "script",
+          "script": "node ./src/save-font.js \"{query}\"",
+          "actions": [
+            {
+              "modifiers": "normal",
+              "command": "figlet",
+              "title": "figlet",
+              "type": "scriptFilter",
+              "scriptFilter": "node ./src/index.js \"{query}\"",
+              "runningSubtext": "Wait...",
+              "withspace": true,
+              "actions": [
+                {
+                  "modifiers": "normal",
+                  "type": "script",
+                  "script": "node ./src/conv.js \"{query}\"",
+                  "actions": [
+                    {
+                      "modifiers": "normal",
+                      "type": "clipboard",
+                      "text": "{query}"
+                    }
+                  ]
+                },
+                {
+                  "modifiers": "cmd",
+                  "type": "script",
+                  "script": "node ./src/gist.js \"{query}\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

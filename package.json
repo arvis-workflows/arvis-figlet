@@ -1,0 +1,36 @@
+{
+  "name": "arvis-figlet",
+  "version": "0.0.1",
+  "description": "arvis workflow to asciify plain text using figlet.js",
+  "license": "MIT",
+  "repository": "importre/arvis-figlet",
+  "author": {
+    "name": "Jaewe Heo",
+    "email": "jaeweheo@gmail.com",
+    "url": "importre.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "files": [
+    "src",
+    "icon.png",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "art",
+    "ascii",
+    "figlet"
+  ],
+  "dependencies": {
+    "arvish": ">=0.4.9",
+    "figlet": "^1.2.0",
+    "got": "^6.6.3"
+  }
+}
