@@ -12,11 +12,6 @@
 ```
 
 
-## Prerequisites
-
-You need [Node.js 4+](https://nodejs.org) and [arvis 3](https://www.arvisapp.com) with the paid [Powerpack](https://www.arvisapp.com/powerpack/) upgrade.
-
-
 ## Install
 
 ```
@@ -47,7 +42,7 @@ $ npm i -g arvis-figlet
 - Type `figlet-all` and <kbd>Enter</kbd>
 - or see [`Hello, World!`](helloworld.md) examples
 
-## 🔗 This workflow is converted from [alfred-workflow]().
+## 🔗 This workflow is converted from [alfred-workflow](https://github.com/importre/alfred-figlet).
 
 * Note that there might be some code change or different actions from the original workflow.
 
