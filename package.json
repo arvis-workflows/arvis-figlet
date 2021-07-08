@@ -1,6 +1,6 @@
 {
   "name": "arvis-figlet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "arvis workflow to asciify plain text using figlet.js",
   "license": "MIT",
   "repository": "importre/arvis-figlet",

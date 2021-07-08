@@ -3,9 +3,9 @@
   "defaultIcon": "icon.png",
   "creator": "importre",
   "description": "arvis workflow to asciify plain text using figlet.js",
-  "name": "figlet",
+  "name": "arvis-figlet",
   "readme": "arvis workflow to asciify plain text using figlet.js\n\nSee https://github.com/jopemachine/arvis-figlet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "webAddress": "https://github.com/jopemachine/arvis-figlet",
   "enabled": true,
   "commands": [
